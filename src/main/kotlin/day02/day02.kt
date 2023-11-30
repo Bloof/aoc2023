@@ -2,7 +2,8 @@ package day02
 
 object day02 {
 
-    fun solvePuzzle(): String {
+    suspend fun solvePuzzle(): String {
+        AocClient.getAocDayInput(2)
         return "2"
     }
 }

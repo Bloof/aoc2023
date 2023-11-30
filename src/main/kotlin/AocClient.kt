@@ -22,7 +22,7 @@ object AocClient {
 
         val data = try {
             HttpClient(CIO).use { client ->
-                client.get("https://adventofcode.com/2022/day/$day/input") {
+                client.get("https://adventofcode.com/2023/day/$day/input") {
                     header("Cookie", "session=$sessionId")
                 }.bodyAsText().also {
                     file.parentFile.mkdirs()
