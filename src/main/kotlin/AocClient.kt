@@ -36,19 +36,4 @@ object AocClient {
         return data
     }
 
-    private fun saveInputToFile(data: String, day: Int) {
-        try {
-            val directory = File("inputs")
-            if (!directory.exists()) {
-                directory.mkdirs()
-            }
-
-            val file = File(directory, "$day.txt")
-            file.writeText(data)
-        } catch (e: Exception) {
-            throw RuntimeException("Failed to save AoC input to file for day: $day: ${e.message}")
-        }
-    }
-
-
 }
