@@ -2,11 +2,10 @@ package day01
 
 object day01 {
 
-    suspend fun solvePuzzle(): String {
+    suspend fun solvePuzzle() {
         val data = AocClient.getAocDayInput(1)
         println("Day01 part_1: " + partOne(data))
         println("Day01 part_2: " + partTwo(data))
-        return "Done"
     }
 
     fun partOne(data: Array<String>): Int {
