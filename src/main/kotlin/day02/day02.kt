@@ -42,7 +42,7 @@ object day02 {
 
         val games = data.map { it.split(delimiters) }.toList()
 
-        return games.map { game ->
+        return games.sumOf { game ->
 
             val redList =
                 game.filter { it.contains(" red") }.maxOfOrNull { it.removeSuffix(" red").trim().toInt() } ?: 0
@@ -52,8 +52,7 @@ object day02 {
                 game.filter { it.contains(" green") }.maxOfOrNull { it.removeSuffix(" green").trim().toInt() } ?: 0
 
             redList * blueList * greenList
-
-        }.sum()
+        }
     }
 
 }
